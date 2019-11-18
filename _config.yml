@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 大雄的永无岛 Xin's Neverland
+title: 大雄的小本本 The Book Of Xin
 subtitle: where change happens
 description: personal site, Xin Diao
 keywords: blogs,vlogs,photography,reviews
@@ -29,7 +29,7 @@ videos_dir: videos
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: "skip_render/lost-douban-account-movies.html"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -92,6 +92,34 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
+# Douban -> https://github.com/mythsman/hexo-douban
+douban:
+  user: 167165844
+  builtin: true
+  # book:
+  #   title: 'This is my book title'
+  #   quote: 'This is my book quote'
+  movie:
+    title: 'Grabbed from my current Douban account'
+    quote: 'Without movies, the width of my life will be cut to less than current half.'
+  # game:
+  #   title: 'This is my game title'
+  #   quote: 'This is my game quote'
+  timeout: 10000 
+
+lightgallery:
+    # if you don't specify the css or js source, the default cdn will be used.
+    css: /css/lightgallery.min.css
+    js: /js/lightgallery.min.js
+    # sorry that I can not find any cdn hosting following plugins,
+    # please self-host the plugin js and add url here
+    plugins:
+        lg-thumbnail: /js/lg-thumbnail.js
+        # lg-zoom:
+        # lg-autoplay:
+        # lg-fullscreen:
+        # lg-pager:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
