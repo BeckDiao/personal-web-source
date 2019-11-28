@@ -6,7 +6,7 @@ tags:
  - vlog
 ---
 
-<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/spoken_cover.jpg" width = "386" height = "290" alt="test"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/spoken_cover.jpg" width = "386" height = "290"/>
 
 <!-- more -->
 

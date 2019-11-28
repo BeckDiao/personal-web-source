@@ -131,7 +131,6 @@ menu:
   home: / || home
   inventory: /inventory/ || folder
   videos: /videos/ || youtube
-  photography: /photography/ || camera
   about: /about/ || user
   #tags: /tags/ || tags
   #categories: /categories/ || th
@@ -199,7 +198,7 @@ social:
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
+  Instagram: https://instagram.com/xindiao11 || instagram
   #Skype: skype:yourname?call|chat || skype
 
 social_icons:

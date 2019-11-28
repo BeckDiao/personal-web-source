@@ -5,7 +5,7 @@ tags:
  - videos
 ---
 
-<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/san_juan_island_cover.jpg" width = "415" height = "240" alt="test"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/san_juan_island_cover.jpg" width = "415" height = "240"/>
 
 <!-- more -->
 # Vlog
