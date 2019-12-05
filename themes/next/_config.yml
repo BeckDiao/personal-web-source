@@ -130,6 +130,7 @@ scheme: Muse
 menu:
   home: / || home
   inventory: /inventory/ || folder
+  books: /books/ || book
   videos: /videos/ || youtube
   about: /about/ || user
   #tags: /tags/ || tags
