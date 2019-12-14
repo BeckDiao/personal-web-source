@@ -1,5 +1,5 @@
 ---
-title: 大雄&雷丘婚礼系列之<同学，对个答案> Wedding series part 2
+title: 大雄&雷丘婚礼系列之<同学，对个答案> | Wedding series part 2
 date: 2019-09-28 14:21:33
 tags: 
  - videos

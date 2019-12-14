@@ -7,6 +7,12 @@ date: 2019-11-12 22:02:29
 
 <!-- more -->
 
+* [京都 vlog Kyoto vlog](/2019/12/02/京都vlog/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/kyoto_vlog.jpg" width = "516" height = "336"/>
+
+* [兰州 vlog Lanzhou vlog](/2019/11/29/兰州vlog/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/lanzhou_cover.jpg" width = "368" height = "207"/>
+
 * [大雄&雷丘婚礼系列之<同学，对个答案> Wedding series part 2](/2019/09/28/wedding-series-live-test/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/wedding_video2_cover.png" width = "640" height = "400"/>
 

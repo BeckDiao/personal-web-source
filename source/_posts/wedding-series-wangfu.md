@@ -1,5 +1,5 @@
 ---
-title: 大雄&雷丘婚礼系列之两个恰恰好 Wedding series part 1
+title: 大雄&雷丘婚礼系列之两个恰恰好 | Wedding series part 1
 date: 2019-09-21 13:21:33
 tags: 
  - videos

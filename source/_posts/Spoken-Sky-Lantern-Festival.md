@@ -1,5 +1,5 @@
 ---
-title: Spoken 天灯节 Sky Lantern Festival 
+title: Spoken 天灯节 | Sky Lantern Festival 
 date: 2019-06-01 12:25:33
 tags: 
  - videos
