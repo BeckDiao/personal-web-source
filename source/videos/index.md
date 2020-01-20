@@ -7,6 +7,9 @@ date: 2019-11-12 22:02:29
 
 <!-- more -->
 
+* [东京 vlog part 1 | Tokyo vlog part 1](/2019/12/26/vlog/东京vlog-part1/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/videos/tokyo.jpg" width = "340" height = "270"/>
+
 * [京都 vlog Kyoto vlog](/2019/12/02/京都vlog/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/kyoto_vlog.jpg" width = "516" height = "336"/>
 
