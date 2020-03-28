@@ -10,6 +10,7 @@ date: 2019-11-12 22:02:29
 [大雄的电影 list - top 25](/2020/03/15/movie-top25-list/)
 [大雄的书 list - top 10](/2020/03/15/book-top25/)
 [大雄的电影 list - 2020 top 10](/2020/03/15/movie-top10-2020/)
+[大雄的那些将来还会重听的播客节目](/2020/03/28/podcasts-to-be-listened-again/)
 
 -----
 

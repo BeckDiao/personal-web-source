@@ -5,7 +5,7 @@ tags:
  - inventory
 ---
 
-<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/others/top10.jpeg" width = "1013" height = "440"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/others/top10-movie.jpg" width = "1000" height = "320"/>
 
 <!-- more -->
 ## Introduction

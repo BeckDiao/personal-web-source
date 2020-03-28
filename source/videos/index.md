@@ -7,6 +7,12 @@ date: 2019-11-12 22:02:29
 
 <!-- more -->
 
+* [小布系列01 - 亚麻程序员在家工作的一天 | a WFH day for an amazon software doggo during COVID19 outbreak](/2020/03/22/Brooklyn-01/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/brooklyn_01.png" width = "512" height = "288"/>
+
+* [Before Sunset 巴黎圣地巡礼 vlog](/2020/03/09/爱在vlog/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/before_sunset_vlog.jpg" width = "385" height = "217"/>
+
 * [东京 vlog part 1 | Tokyo vlog part 1](/2019/12/26/东京vlog-part1/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/tokyo.jpg" width = "340" height = "270"/>
 
