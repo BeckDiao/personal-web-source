@@ -132,9 +132,8 @@ menu:
   inventory: /inventory/ || folder
   books: /books/ || book
   videos: /videos/ || youtube
-  about: /about/ || user
   summaries: /summary/ || file-word-o
-  reports: /report/ || folder
+  about: /about/ || user
   #tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
