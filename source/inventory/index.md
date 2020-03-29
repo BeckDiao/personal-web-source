@@ -40,7 +40,7 @@ date: 2019-11-12 22:02:29
 
 ## Pinned Links at top
 
-[大雄的 2020 OP1 placeholder - ToDo](/)
+[大雄的 2020 OP1 placeholder](/2020/01/01/2020plan/)
 [大雄的30岁 plan](/2019/11/11/30plan/)
 [大雄的电影 list - top 25](/2020/03/15/movie-top25-list/)
 [大雄的书 list - top 10](/2020/03/15/book-top25/)
