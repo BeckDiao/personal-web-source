@@ -7,152 +7,10 @@ tags:
 
 鸟叔linux 笔记。still in progress。
 
+reminder：
+last step is to 整理成其他人能理解的东西 by integrating and adding context.
+
 <!-- more -->
-
-## 第0章 计算机概论
-### 0.1 电脑：辅助人脑的好工具
-#### 0.1.1 电脑硬体的五大单元
-*所有data都要经过Memory，所以Memory的大小会对整体速度影响很大。*
-#### 0.1.2 一切设计的起点： CPU 的架构
-CPU 其实内部已经含有一些**微指令**，我们所使用的software都要经过CPU 内部的微指令集来达成。
-指令集的设计主要又被分为两种设计理念：
-* 精简指令集(Reduced Instruction Set Computer, RISC)：
-每个指令的执行时间都很短，完成的动作也很单纯
-常见的RISC 微指令集CPU： Oracle的SPARC 系列（学术+金融领域）， IBM 公司的Power Architecture 和 PowerPC 系列（Sony）、与ARM的ARM CPU 系列（手机、路由器）
-* 复杂指令集(Complex Instruction Set Computer, CISC)：
-x86架构的CPU(用于Personal Computer)
-*word size(32位，64位)：CPU一次资料读取的最多Bit数。CPU读取量 --> memory读取量 ==> 32位CPU --> memory 最大读取量4GB*
-
-### 0.2 个人电脑架构与相关设备元件
-#### 0.2.1 执行脑袋运算与判断的CPU
-Intel主板架构：<br>
-<img src="https://upload-images.jianshu.io/upload_images/10023701-9bf13776fb4618c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width = "800" height = "600"/>
-
-*SouthBridge(南桥) 被设计用来处理低速信号。NorthBridge(北桥)用来处理高速信号(CPU <--> Main memory)现在已经被整合到CPU内*
-
-Hyper-Threading, HT : CPU内把regiter 分成两部分，像是两个线程。
-
-#### 0.2.2 Memory
-#### 0.2.3 显卡
-#### 0.2.4 disk与储存设备
-<img src="https://upload-images.jianshu.io/upload_images/10023701-45b97ccae47856aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width = "800" height = "600"/>
-
-转圈的方式读写
-组成：圆形磁碟盘、机械手臂、 磁碟读取头与主轴马达
-
-传输接口： SATA接口，USB接口
-### 0.3 data表示方式
-### 0.4 软件运行
-#### 0.4.2 OS
-* Kernel： OS其实也是一组程序，这组程序的重点在于管理**电脑的所有活动**以及驱动系统中的所有**硬件**。
-OS的功能就是让CPU可以开始判断逻辑与运算数值、让main memory可以开始载入/读出data/functions、让disk可以开始被存取、让网卡可以开始传输data、让所有周边可以开始运转等等。 <=== **Kernel**
-Kernel functions所放置到记忆体当中的区块是受保护的！并且开机后就一直常驻在memory当中。
-主要用于管理硬件，提供合理的电脑系统资源分配。
-Kernel是处于硬件和system call 之间的位置。
-至少包括以下功能：
-System call interface
-Process control：安排多个process的执行先后顺序
-Memory management
-Filesystem management
-
----------
-
-## 第1章  Linux是什么与如何学习
-*POSIX: （Portable Operating System Interface）重点在规范kernel与application之间的interface*
-***uname -r*** 查阅kernel版本
-*Kernel + Softwares + Tools +可完整安装程序 = Linux distribution*
-
-distributions主要分为两大系统:
-* 一种是使用RPM方式安装软体的系统，包括Red Hat, Fedora, SuSE等都是这类
-* 一种则是使用Debian的dpkg方式安装软件的系统，包括Debian, Ubuntu, B2D等等
-
-
--------
-
-## 第2章  主机规划与disk分割
-## 2.1 Linux与硬件的搭配
-#### 2.1.3 各硬件装置在Linux中的文件夹名称
-***在Linux系统中，每个 装置 都被当成一个 文件夹 来对待， 几乎所有的硬件装置文件夹都在/dev这个目录内***
-### 2.2 disk分割
-#### 2.2.2 MBR 与partition table
-*主要开机记录区(Master Boot Record, MBR)：可以安装开机管理程序的地方，有446 bytes*
-*分割表(partition table)：记录整个disk分割的状态，有64 bytes*
-
-
-#### 2.2.3 开机流程中的BIOS 与UEFI 开机检测程序
-1. (早期)BIOS 搭配MBR/GPT 的开机流程
-*CMOS是记录各项硬件参数且嵌入在主机板上面的储存器。*
-
-  （1） BIOS：开机主动执行的firmware，会认识第一个可开机的装置；写入到硬件上的一个软件程序，在开机的时候，电脑系统会主动执行的第一个程序。
-  （2） MBR：第一个可开机装置的第一个磁区内的主要开机记录区块，内含开机管理程序；
-  （3） 开机管理程序(boot loader)：一支可读取kernel file来执行的软体；写在MBR(446bytes)上；也可以安装在每个partition 的boot sector上
-  （4） Kernel file：开始OS的功能...
-
-loader的主要任务：
-（1） 提供选择。
-（2） load OS。
-（3） 转交给loader：
-<img src="https://upload-images.jianshu.io/upload_images/10023701-a05d60b506fc9511.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width = "800" height = "600"/>
-
-2. （近期）UEFI BIOS搭配GPT开机的流程
-UEFI (Unified Extensible Firmware Interface) ：取代BIOS，低端版OS，载入OS后，UEFI 就停止工作
-
-
-#### 2.2.4 Linux安装模式下，disk分割的选择
-directory tree
-**root: "/"**
-<img src="https://upload-images.jianshu.io/upload_images/10023701-8894280530ae9c18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width = "600" height = "300"/>
-directory tree
-
-如何结合 directory tree 的架构与disk内的资料: mount
-*mount: 利用一个目录当成进入点，将disk partition的资料放置在该目录下；也就是说，进入该目录就可以读取该partition*。如：
-<img src="https://upload-images.jianshu.io/upload_images/10023701-7597b9911846b8d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width = "600" height = "300"/>
-目录树与partition之间的相关性
-
-
-## 第4章 首次登入与线上求助
-1. man + command 后出现的右上角的代号：
-
-代号	代表内容
-**1	使用者在shell环境中可以操作的指令或可执行档**
-2	系统核心可呼叫的函数与工具等
-3	一些常用的函数(function)与函式库(library)，大部分为C的函式库(libc)
-4	装置档案的说明，通常在/dev下的档案
-**5	设定档或者是某些档案的格式**
-6	游戏(games)
-7	惯例与协定等，例如Linux档案系统、网路协定、ASCII code等等的说明
-**8	系统管理员可用的管理指令**
-9	跟kernel有关的文件
-
-2. 
-*man -f XXX*： 所有名为XXX的说明文件，指令必须是XXX
-e.g.
-man -f man 得到很多man(1), man(7)等
-然后用man 7 man 就可以得到代号为7的man的说明文件
-<br>
-*man -k XXX*： 只要description中有man这个关键字就将该说明列出来。
-<br>
-3. 
-*info + command*
-
-#### 查询方法Summary:
-1. 知道command 忘了参数， --help
-2. 查command 的说明， man, info
-3. software文档，/usr/share/doc
-
-#### 4.5 正确的关机方法
-正常情况下，要关机时需要注意底下几件事：
-* 观察系统的使用状态：
-*who* :目前有谁在线
-*ps -aux*: 背景执行的程序
-*netstat -a*: 查看网络情况
-
-* 正确的关机指令使用：
-将data同步写入disk中的指令： sync ==> memory --> disk
-惯用关机：shutdown
-重新开机，reboot
-关机：poweroff
-
 
 
 ## 第5章 Linux 的档案权限与目录配置
@@ -340,7 +198,8 @@ FHS建议：
 只要针对常态性变动型file，如cache,log等
 
 #### 5.3.2 directory tree
-![dir tree](https://upload-images.jianshu.io/upload_images/10023701-6c362df0911eb073.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-6c362df0911eb073.png"/>
+dir tree
 
 注意：图中的Link不一定适用于所有distribution。
 
@@ -455,7 +314,8 @@ options:
 
 find的特殊功能就是能够进行**额外动作**
 e.g.
-![find的action sample.png](https://upload-images.jianshu.io/upload_images/10023701-9c95bc6e89f1313e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-9c95bc6e89f1313e.png"/>
+find的action sample.png
 
 sample中特殊的地方有`{}` 以及`\;` 还有`-exec` 这个关键字，这些东西的意义为：
 `{}` 代表的是『由find 找到的内容』，如上图所示，find 的结果会被放置到{} 位置中；
@@ -488,17 +348,20 @@ FileSystem通常会将file和 file permission等attribute存放在不同block:
 
 两种存放方式：
 1. indexed allocation(inode/block)
-![inode/block data存取示意图](https://upload-images.jianshu.io/upload_images/10023701-209411f10a0eb303.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-209411f10a0eb303.png"/>
+inode/block data存取示意图
 
 2. FAT(用于如U盘)
-![FAT file system 资料存取示意图](https://upload-images.jianshu.io/upload_images/10023701-2d23275cf39896b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-2d23275cf39896b1.png"/>
+FAT file system 资料存取示意图
+
 这种如果block太过分散，disk无法转一圈读取所有资料的话，会很慢，所以过一段时间就需要 disk重组。
 
 #### 7.1.3 Linux的EXT2(Linux second extended file system) file system(inode)
 
 因为：inode 与 block数量庞大，不易管理
 所以：block group:
-![图片.png](https://upload-images.jianshu.io/upload_images/10023701-c6ab07488f9de021.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-c6ab07488f9de021.png"/>
 
 **boot sector**: 安装开机管理程序。file system最前端。
 - data block: 
@@ -526,7 +389,8 @@ inode所记录的file data至少有：
 
 inode/block 与 file 大小关系：
 inode 记录block 号码的区域定义为12个直接，一个间接, 一个双间接与一个三间接记录区：
-![inode结构示意图](https://upload-images.jianshu.io/upload_images/10023701-5a24a783db4ec6b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-5a24a783db4ec6b6.png"/>
+inode结构示意图
 
 - superblock
 记录整个filesystem 相关info的地方
@@ -636,7 +500,8 @@ Linux 的kernel 如何管理这些认识的FS?
 
 * hard link: 只是在某个目录下新增一条file name 连结到某inode号码的关连记录
 多个file name 对应一个inode number
-![hard Link file读取示意图](https://upload-images.jianshu.io/upload_images/10023701-0881d0456901f1a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-0881d0456901f1a6.png"/>
+hard Link file读取示意图
 
 限制：
   不能跨Filesystem.
@@ -645,7 +510,8 @@ Linux 的kernel 如何管理这些认识的FS?
 * Symbolic Link (快捷方式)
 两个file指向不同的inode number.
 
-![symbolic link 连接的file读取示意图](https://upload-images.jianshu.io/upload_images/10023701-1a97ad94f74e6044.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/10023701-1a97ad94f74e6044.png"/>
+symbolic link 连接的file读取示意图
 
 * `ln` command
 
