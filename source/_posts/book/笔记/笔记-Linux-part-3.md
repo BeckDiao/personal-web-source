@@ -11,9 +11,7 @@ tags:
 
 TBD: 整理成更加分类的模式 或 直接成cheat sheet
 
-[link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part1)
-
-简书： https://www.jianshu.com/p/b2952d00efe4
+[link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part3)
 
 <!-- more --> 
 

@@ -40,17 +40,17 @@ date: 2019-11-12 22:02:29
 
 ## Pinned Links at top
 
-[大雄的 2020 OP1](/2020/01/01/inventory-2020plan/)
-[大雄的30岁 plan](/2019/11/11/inventory-30plan/)
-[大雄的电影 list - top 25](/2020/03/15/inventory-movie-top25-list/)
-[大雄的书 list - top 10](/2020/03/15/inventory-book-top25/)
-[大雄的电影 list - 2020 top 10](/2020/03/15/inventory-movie-top10-2020/)
-[大雄的那些将来还会重听的播客节目](/2020/03/28/inventory-podcasts-to-be-listened-again/)
+[大雄的 2020 OP1](/2020/01/01/inventory/plan/inventory-2020plan/)
+[大雄的30岁 plan](/2019/11/11/inventory/plan/inventory-30plan/)
+[大雄的电影 list - top 25](/2020/03/15/inventory/favorite/inventory-movie-top25-list/)
+[大雄的书 list - top 10](/2020/03/15/inventory/favorite/inventory-book-top25/)
+[大雄的电影 list - 2020 top 10](/2020/03/15/inventory/favorite/inventory-movie-top10-2020/)
+[大雄的那些将来还会重听的播客节目](/2020/03/28/inventory/favorite/inventory-podcasts-to-be-listened-again/)
 
 
 ## 2020
 
-* [2020-02 买手店进货清单](/2020/03/11/inventory-2020-02/)
+* [2020-02 买手店进货清单](/2020/03/11/inventory/monthly-report/inventory-2020-02/)
 
 现在2020年3月11号，正在家中的我，回过头来看过去的这个月，最想感叹的就是——还好这个月去成了欧洲。
 虽然，我现在有点担心在欧洲期间以及从欧洲回来的路上自己感染了新冠肺炎。
@@ -60,7 +60,7 @@ date: 2019-11-12 22:02:29
 现在大概没有人能知道，2020年，将会怎样度过。
 
 
-* [2020-01 买手店进货清单](/2020/02/11/inventory-2020-01/)
+* [2020-01 买手店进货清单](/2020/02/11/inventory/monthly-report/inventory-2020-01/)
 
 2020 年的一个月。可惜没给自己开一个好头。这个月过的很不真实，前半段很快就过去了，和往常一样，后半段无比缓慢，每一天都充斥着复杂的负面的情绪。
 
@@ -72,14 +72,14 @@ date: 2019-11-12 22:02:29
 
 ## 2019
 
-* [2019-12 买手店进货清单](/2020/01/11/inventory-2019-12/)
+* [2019-12 买手店进货清单](/2020/01/11/inventory/monthly-report/inventory-2019-12/)
 
 2019年就这么过去了，谈不上多么满意，但是也绝对不会说不满意的一年，其实也不错了吧。
 
 新的一年，这个「买手店」是我新年「希望达成目标list」上很重要的一项，希望每个月都可以保质保量完成吧。坚持住，一年后的今天看到一个比现在长不少的list应该会满足很多吧。
 
 
-* [2019-11 买手店进货清单](/2019/12/11/inventory-2019-11/)
+* [2019-11 买手店进货清单](/2019/12/11/inventory/monthly-report/inventory-2019-11/)
 
 万事开头难，这是我「买手店」的第一批货，按时到货了，希望我的这个“小店”哪怕没有客源，仍可以一直运转下去。
 

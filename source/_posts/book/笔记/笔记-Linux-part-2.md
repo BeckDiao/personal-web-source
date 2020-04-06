@@ -9,9 +9,7 @@ tags:
 
 第二部分 Linux 文件、目录与磁盘格式
 
-[link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part1)
-
-简书： https://www.jianshu.com/p/b2952d00efe4
+[link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part2)
 
 <!-- more --> 
 

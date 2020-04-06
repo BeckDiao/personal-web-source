@@ -7,11 +7,9 @@ tags:
 
 鸟叔的Linux私房菜
 
-第二部分 Linux 的规划与安装
+第一部分 Linux 的规划与安装
 
 [link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part1)
-
-简书： https://www.jianshu.com/p/b2952d00efe4
 
 <!-- more --> 
 
