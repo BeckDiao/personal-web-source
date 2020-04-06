@@ -7,7 +7,7 @@ tags:
 
 鸟叔的Linux私房菜
 
-第一部份 Linux 的规划与安装
+第二部分 Linux 的规划与安装
 
 [link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part1)
 
@@ -99,12 +99,12 @@ distributions主要分为两大系统:
 *分割表(partition table)：记录整个disk分割的状态，有64 bytes*
 
 
-#### 2.2.3 开机流程中的BIOS 与UEFI 开机检测程序
+#### 2.2.3 开机流程中的BIOS
 1. (早期)BIOS 搭配MBR/GPT 的开机流程
 *CMOS是记录各项硬件参数且嵌入在主机板上面的储存器。*
 
-  （1） BIOS：开机主动执行的firmware，会认识第一个可开机的装置；写入到硬件上的一个软件程序，在开机的时候，电脑系统会主动执行的第一个程序。
-  （2） MBR：第一个可开机装置的第一个磁区内的主要开机记录区块，内含开机管理程序；
+  （1） BIOS(Basic Input/Output System)：**开机主动执行的firmware**，会认识第一个可开机的装置；写入到硬件上的一个软件程序，在开机的时候，电脑系统会主动执行的第一个程序。
+  （2） MBR：第一个可开机装置的第一个磁区内的主要开机记录区块，内含**开机管理程序**；
   （3） 开机管理程序(boot loader)：一支可读取kernel file来执行的软体；写在MBR(446bytes)上；也可以安装在每个partition 的boot sector上
   （4） Kernel file：开始OS的功能...
 
@@ -112,21 +112,14 @@ loader的主要任务：
 （1） 提供选择。
 （2） load OS。
 （3） 转交给loader：
-<img src="https://upload-images.jianshu.io/upload_images/10023701-a05d60b506fc9511.png" width = "800" height = "600"/>
-
-2. （近期）UEFI BIOS搭配GPT开机的流程
-UEFI (Unified Extensible Firmware Interface) ：取代BIOS，低端版OS，载入OS后，UEFI 就停止工作
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/MBR.png"/>
 
 
 #### 2.2.4 Linux安装模式下，disk分割的选择
-directory tree
-**root: "/"**
-<img src="https://upload-images.jianshu.io/upload_images/10023701-8894280530ae9c18.png" width = "600" height = "300"/>
-directory tree
 
 如何结合 directory tree 的架构与disk内的资料: mount
 *mount: 利用一个目录当成进入点，将disk partition的资料放置在该目录下；也就是说，进入该目录就可以读取该partition*。如：
-<img src="https://upload-images.jianshu.io/upload_images/10023701-7597b9911846b8d1.png"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/mount%2Bfilesystem.png"/>
 目录树与partition之间的相关性
 
 

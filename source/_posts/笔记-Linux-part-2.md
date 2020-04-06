@@ -1,17 +1,19 @@
 ---
-title: Linux 学习笔记
-date: 2020-03-30 16:13:33
+title: Linux 学习笔记 - 第二部分
+date: 2020-04-03 16:13:33
 tags: 
  - books
 ---
 
-鸟叔linux 笔记。still in progress。
+鸟叔的Linux私房菜
 
-reminder：
-last step is to 整理成其他人能理解的东西 by integrating and adding context.
+第二部分 Linux 文件、目录与磁盘格式
 
-<!-- more -->
+[link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part1)
 
+简书： https://www.jianshu.com/p/b2952d00efe4
+
+<!-- more --> 
 
 ## 第5章 Linux 的档案权限与目录配置
 多人多工环境 --> 权限问题
@@ -42,13 +44,6 @@ c: character device，一次性读取型设备，如键鼠
 ##### (2) 第二栏的数字 表示有多少 file name 连结到此节点(i-node)
 每个file都会将他的permission 与 属性 记录到file system的i-node中，不过，我们使用的dir tree 却是使用file name来记录，因此每个file name 就会连结到一个i-node啰！这个属性记录的，就是有多少不同的file name连结到相同的一个i-node number.
 
-##### (3) 第三栏表示这个file(或dir)的 owner
-##### (4) 第四栏表示这个file的所属group
-##### (5) file size, unit = bytes
-##### (6) create date or last modify date
-##### (7) file name `.ABC`这种前面有`.`的是隐藏file, 用`-a` 可以显示
-
-
 #### 5.2.2 如何改变档案属性与权限
 #####（1）chgrp ：改变file 的 group
 要被改变的group name 必须要在/etc/group file 内存在
@@ -66,19 +61,6 @@ r:4   w:2    x:1
 `r, w, x`
 e.g. `chmod u+x,g=rwx test.file`
 
-#### 5.2.3 dir与file 之 permission意义：
-1. 对file的重要性：
-(1) 为什么要用`x`:
-不像windows系统，Linux下的file是否能被执行是由这个`x`这个权限来决定的
-(2) 有`w` 并没有删除file的权限，rwx都是针对于file 内容来说的，与file name 无关。
-
-2. 对dir 的重要性：
-(1) file是存放content的，dir是存放file name的。所以，针对于dir的`rwx`：
-`r`: 可`ls`
-`w`: dir里面的东西增删改移
-`x`：能否进入该dir成为working dir.   PS:`cd=change dir`
-
-
 #### 5.2.4 Linux file type 与 后缀名
 ##### file type 
 * regular file `-`
@@ -86,10 +68,6 @@ e.g. `chmod u+x,g=rwx test.file`
 2. binary。可执行scripts。
 3. data。有些程序在运作的过程当中会读取某些特定格式的file，那些特定格式的file可以被称为data file。
 e.g. Linux在user log in时，都会将登录的data记录在/var/log/wtmp 这个file内，该file是一个data file，他能够透过last这个指令读出来！但是使用cat时，会读出乱码～因为他是属于一种特殊格式的file.
-
-##### directory `d`
-##### link `l`
-类似于windows里的快捷方式？ 是一个`->` 这样的Map
 
 ##### device。通常集中在/dev下
 * block device  `b`:  如disk,可以随机的在disk的不同block读写，这种device就是block device
@@ -104,6 +82,7 @@ e.g. Linux在user log in时，都会将登录的data记录在/var/log/wtmp 这�
 
 ### 5.3 Linux目录配置
 #### 5.3.1 Linux目录配置的依据--FHS（Filesystem Hierarchy Stardard）
+**FHS的重点在于规范每个特定的目录下应该要放置什么样子的数据.**
 
  。	|可分享的(shareable)|	不可分享的(unshareable)
 -------|---------------------------|-----------------
@@ -153,44 +132,45 @@ dir| for what
 
 建议存放：
 
-|dir| for what
-|--|--
-|/home |每增加一个user，都会增加一个相应的home dir。`~` 表示当前user的/home, ~AAA 表示AAA的home dir
-|/root |root的home dir
+dir| for what
+--|--
+/home |每增加一个user，都会增加一个相应的home dir。`~` 表示当前user的/home, ~AAA 表示AAA的home dir
+/root |root的home dir
 /lib<qual>|与/lib格式不同之外的函数库，如/lib64
 
 以上是FHS标准，以下的也重要：
 
-|dir| for what
-|--|--
-|/lost_found |file system 发生错误时，把遗失的放在此
-|/proc| virtual filesystem，此dir下放的东西都是存在memory中，存放如kernel, process, devices status and network
-|/sys| 也是virtual file system 主要记录kernel和hardware相关的东西
+dir| for what
+--|--
+/lost_found |file system 发生错误时，把遗失的放在此
+/proc| virtual filesystem，此dir下放的东西都是存在memory中，存放如kernel, process, devices status and network
+/sys| 也是virtual file system 主要记录kernel和hardware相关的东西
 
 mount 的时候 /etc, /bin, /dev , /lib, /sbin 必须跟 `/` 放在一起，用于救援模式。
 
 
 ##### /usr 的意义和内容
+**usr = Unix Software Resource** for **shareable, static data**.
 FHS建议所有developer，应该将他们的资料合理的分别放置到这个目录下的次目录，而不要自行建立该software自己独立的目录。
 
 FHS要求必须：
 
-|dir| for what
-|--|--
-|/usr/bin/ | 
-|/usr/lib/ |
-|/usr/local/ |自己安装的software安装在这个下面
-|/usr/sbin/|非系统正常运作所需要的系统command，如server 中的damon
-|/usr/share/| 
+dir| for what
+--|--
+/usr/bin/ | 和/bin不一样，/bin是被开机过程所需要的
+/usr/lib/ |
+/usr/local/ |自己安装的software安装在这个下面
+/usr/sbin/|非系统正常运作所需要的系统command，如server 中的damon
+/usr/share/| 
 
 
 FHS建议：
 
 
-|dir| for what
-|--|--
-|/usr/include/|c/c++等程序语言的header与include放置处
-|/usr/src/|源代码
+dir| for what
+--|--
+/usr/include/|c/c++等程序语言的header与include放置处
+/usr/src/|源代码
 
 
 ##### /var 的意义与内容：
@@ -198,25 +178,16 @@ FHS建议：
 只要针对常态性变动型file，如cache,log等
 
 #### 5.3.2 directory tree
-<img src="https://upload-images.jianshu.io/upload_images/10023701-6c362df0911eb073.png"/>
-dir tree
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/root-dir-tree.png"/>
+root dir tree
 
 注意：图中的Link不一定适用于所有distribution。
 
-#### 5.3.3 绝对路径（从`/`开始）与相对路径（当前路径开始）
 
-
-
+-----
 
 ## 第6章 Linux file与dir管理
 ### 6.1 目录与路径
-
-`- 代表前一个工作目录`
-`~ 代表『目前使用者身份』所在的家目录`
-`~account 代表account 这个使用者的家目录(account是个帐号名称)`
-
-`pwd` 和 `pwd -P`的差别在于“是link的file/dir"，前者显示当前路径，-P显示的真正的Path。
-
 #### 6.1.3 关于执行档路径的变数： $PATH
 1. `PATH="${PATH}:/root"` --> 将`/root` 加入到`$PATH`之后。$PATH中包含的所有dir用`:`隔开。
 
@@ -228,19 +199,8 @@ dir tree
 #### 6.2.2  cp, rm, mv
 1. 直接用`cp`的话cp生成的file会使用default permission。要想把权限也一直copy，用`cp -a`或`-p`。
 
-2. `cp -s` `-s`是symbol link，可以理解为“快捷方式”, 就是把cp出的新的file 指向原始file
+2. `cp -s` `-s`是symbol link，就是把cp出的新的file 指向原始file
 `cp -l` `-l`是hard link，与原文件所有都一模一样，link数+1.
-
-查看file 指令 summary:
-```
-cat, nl, more, less, head, tail 
-      n, N, g, G
-```
-
-#### 6.3.5 修改file时间或create a new file: touch
-修改内容时间(mtime) --> 不改内容这个不变
-修改状态时间(ctime) --> touch 可改
-
 
 ### 6.4 file与dir的预设权限与隐藏权限
 #### 6.4.1 file 预设权限
@@ -252,7 +212,7 @@ chattr [+-=][ASacdistu]档案或目录名称
 lsattr [-adR]档案或目录
 
 #### 6.4.3 file 特殊权限： SUID, SGID, SBIT
-1. SUID(set UID): 当s出现在owner的x权限上时(比如/usr/bin/passwd 的权限 -rw**s**r-xr-x)，被称为SUID。
+1. SUID(set Uer ID up on execution): 当s出现在owner的x权限上时(比如/usr/bin/passwd 的权限 -rw**s**r-xr-x)，被称为SUID。
 限制与功能：SUID仅对binary program(不能Shell script) 有效。执行者需要有x权限。仅在run-time有效。执行者将（暂时）拥有Owner权限。
 
 ```
@@ -284,12 +244,13 @@ user($xindiao) 在执行passwd的**过程中** 会暂时拥有root 权限 ==> �
 
 ### 6.5 command 与 file 的 搜寻
 #### 6.5.1 command对应 的完整file name 的搜寻
+`which` 是根据『PATH』这个env的path，去搜寻executable的path
 `which [-a] command` ==> `-a` all
 
-**which预设是找PATH内所包括的目录**
+**which是找PATH内所包括的所有dir**
 
 #### 6.5.2 file name 的搜寻
-1. whereis 由一些特殊的dir中寻找file name，主要针对/bin, /sbin, /man
+1. whereis 依据 /var/lib/mlocate 内的数据库 file name，主要针对（但不限于）/bin, /sbin, /man
 `whereis -l` list whereis 会去查询的目录
 `-b`: 只找binary file
 `-m`: 只找man下的
@@ -297,7 +258,7 @@ user($xindiao) 在执行passwd的**过程中** 会暂时拥有root 权限 ==> �
 `-u`: 只找不在/bin, /man, 和 `/src`下的其他特殊file
 
 2. `locate` 
-只要完整file name(包含Path)中包含要搜索的词，就会显示出来。用于忘记某个file具体叫什么名字的时候很有用。
+只要完整file name(包含Path)中包含要搜索的词(i.e. 不需要完整的file name)，就会显示出来。用于忘记某个file具体叫什么名字的时候很有用。
 **限制**：Locate 只搜索 /var/lib/mlocate（已建立的资料库，大概每天更新一次，新creat的file可能会找不到） 里面的data找。
 手动更新`mlocate.db`: updatedb(执行要等几分钟)
 
@@ -314,7 +275,7 @@ options:
 
 find的特殊功能就是能够进行**额外动作**
 e.g.
-<img src="https://upload-images.jianshu.io/upload_images/10023701-9c95bc6e89f1313e.png"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/find-extra-action-example.png"/>
 find的action sample.png
 
 sample中特殊的地方有`{}` 以及`\;` 还有`-exec` 这个关键字，这些东西的意义为：
@@ -322,13 +283,14 @@ sample中特殊的地方有`{}` 以及`\;` 还有`-exec` 这个关键字，这�
 `-exec` 一直到`\;` 是关键字，代表find 额外动作的开始(-exec) 到结束(\;) ，在这中间的就是find 指令内的额外动作。
 因为`; `在bash 环境下是有特殊意义的，因此利用`/`来标识。
 
-
+-----
 
 ## 第7章 Linux disk 与 file system管理
 ### 7.1 认识Linux file system
-**From other websites:**
-`File System是建立在Disk上面的`
-`文件系统是对一个存储设备上的数据和元数据进行组织的机制。它的最终目的是把大量数据有组织的放入持久性(persistant)的存储设备中，比如硬盘和磁盘。文件系统(file system)是就是文件在逻辑上组织形式，它以一种更加清晰的方式来存放各个文件。`
+- `File System是建立在Disk/storage device上面的`
+- file system defines how data is stored and retrieved.
+- `文件系统是对一个存储设备上的数据和元数据进行组织的机制。它的最终目的是把大量数据有组织的放入持久性(persistant)的存储设备中，比如硬盘和磁盘。文件系统(file system)是就是文件在逻辑上组织形式，它以一种更加清晰的方式来存放各个文件。`
+- 每个device有很多partition，每个partition可以被format成不同的file system（但是要能被os兼容）
 
 #### 7.1.2 file system 特性
 Format(格式化)：每种OS所设定的file attribute(e.g. owner, group, time 参数)/permission不完全相同，为了存放这些file所需的data，**需要将partition(分割槽)进行格式化，以成为OS系统能够利用的file system** 。
@@ -340,7 +302,7 @@ Format(格式化)：每种OS所设定的file attribute(e.g. owner, group, time �
 
 
 FileSystem通常会将file和 file permission等attribute存放在不同block: 
-- permission和attribute存放在inode中;
+- permission和attribute存放在**inode**中;
 - 实际data放到data block中。
 - 另外还有一个superblock会记录整个file system的整体Info，包括inode与block的总量、使用量、剩余量等。
 
@@ -348,11 +310,11 @@ FileSystem通常会将file和 file permission等attribute存放在不同block:
 
 两种存放方式：
 1. indexed allocation(inode/block)
-<img src="https://upload-images.jianshu.io/upload_images/10023701-209411f10a0eb303.png"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/inode-strcture.png"/>
 inode/block data存取示意图
 
 2. FAT(用于如U盘)
-<img src="https://upload-images.jianshu.io/upload_images/10023701-2d23275cf39896b1.png"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/windows-structure.png"/>
 FAT file system 资料存取示意图
 
 这种如果block太过分散，disk无法转一圈读取所有资料的话，会很慢，所以过一段时间就需要 disk重组。
@@ -361,14 +323,14 @@ FAT file system 资料存取示意图
 
 因为：inode 与 block数量庞大，不易管理
 所以：block group:
-<img src="https://upload-images.jianshu.io/upload_images/10023701-c6ab07488f9de021.png"/>
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/ex2-file-system-block.png"/>
 
 **boot sector**: 安装开机管理程序。file system最前端。
 - data block: 
 基本限制：
 -- block的大小和数量在format之后不能改变。
 -- 每个Block内最多存放一个file的资料。
--- so, 若file小与block，则该block剩余容量就浪费了。
+-- so, 若file << block，则该block剩余容量就浪费了。
 
 - inode table
 inode所记录的file data至少有：
@@ -384,13 +346,12 @@ inode所记录的file data至少有：
 特性：
 -- 每个inode都是固定的128 bytes(随着File system可变)
 -- 每个file只有一个inode
--- so, 一个File System上能够穿件的file 数量与inode的数量有关
+-- so, 一个File System上能够create的file 数量与inode的数量有关
 -- system在读取file时，先找到inode，分析inode所记录的permission和user是否符合，若符合再开始读取block的内容
 
 inode/block 与 file 大小关系：
 inode 记录block 号码的区域定义为12个直接，一个间接, 一个双间接与一个三间接记录区：
-<img src="https://upload-images.jianshu.io/upload_images/10023701-5a24a783db4ec6b6.png"/>
-inode结构示意图
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/books/linux/inode-block-arrangement.png"/>
 
 - superblock
 记录整个filesystem 相关info的地方
@@ -500,8 +461,6 @@ Linux 的kernel 如何管理这些认识的FS?
 
 * hard link: 只是在某个目录下新增一条file name 连结到某inode号码的关连记录
 多个file name 对应一个inode number
-<img src="https://upload-images.jianshu.io/upload_images/10023701-0881d0456901f1a6.png"/>
-hard Link file读取示意图
 
 限制：
   不能跨Filesystem.
@@ -509,11 +468,6 @@ hard Link file读取示意图
 
 * Symbolic Link (快捷方式)
 两个file指向不同的inode number.
-
-<img src="https://upload-images.jianshu.io/upload_images/10023701-1a97ad94f74e6044.png"/>
-symbolic link 连接的file读取示意图
-
-* `ln` command
 
 
 ### 7.3 Disk的partition, format, check 和 mount
@@ -530,12 +484,9 @@ symbolic link 连接的file读取示意图
 `blkid` 列出装置的UUID 等参数
 `parted` 列出disk的partition类型与partition info
 
-
-
 #### 7.3.2 disk分割： gdisk/fdisk
 
 #### 7.3.3 disk format(create and set up File System)
-
 
 #### 7.3.4 File System Repair(check?)
 
@@ -548,8 +499,6 @@ symbolic link 连接的file读取示意图
 注意：如果你要用来mount的目录里面并不是空的，那么mount了File System之后，原目录下的东西就会暂时的消失。
 
 `mount` : 将device(file system) mount到某个directory
-`remount`: 
-`umount`: 
 
 ### 7.4 设定开机mount
 ####  7.4.1 开机mount  /etc/fstab 及/etc/mtab
@@ -577,25 +526,4 @@ swap：就是disk模拟成为memory，
 CPU所读取的资料都来自于memory，那当memory不足的时候，为了让后续的program可以顺利的运作，因此在memory中暂不使用的program与data就会被挪到swap中了。
 
 （因为如今一般用不太到，所以Details 跳过）
-
-
-
-
-## 第8章 File与File System的compress,package与backup
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
