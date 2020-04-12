@@ -5,9 +5,9 @@ tags:
  - books
 ---
 
-鸟叔的Linux私房菜
+鸟叔的Linux私房菜 之 第一部分 Linux 的规划与安装
 
-第一部分 Linux 的规划与安装
+计算机的基本概念，需要牢牢掌握和理解，虽然平时工作几乎用不到，但是这是对于自我专业性的部分自信来源。
 
 [link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part1)
 

@@ -5,9 +5,9 @@ tags:
  - books
 ---
 
-鸟叔的Linux私房菜
+鸟叔的Linux私房菜 之 第二部分 Linux 文件、目录与磁盘格式
 
-第二部分 Linux 文件、目录与磁盘格式
+Linux的一些基本概念，需要牢牢掌握、理解。
 
 [link](http://cn.linux.vbird.org/linux_basic/linux_basic.php#part2)
 

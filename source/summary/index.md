@@ -51,8 +51,8 @@ SDE是我的第一个position，但是未来如何，我也不知道。
 * [什么样的人最适合创业？什么样的人是顶尖的大将之才？](/2018/04/01/article/notes-non-tech//文-什么样的人最适合创业/)
 
 ### Others
-* [突然不想努力了怎么办？](/2018/04/01/article/notes-non-tech//文-突然不想努力了怎么办/)
-* [如何阅读一本厚(教科)书](/2018/04/15/article/notes-non-tech//文-如何读一本厚书.md/)
+* [突然不想努力了怎么办？](/2018/04/01/article/notes-non-tech/文-突然不想努力了怎么办/)
+* [如何阅读一本厚(教科)书](/2018/04/15/article/notes-non-tech/文-如何读一本厚书/)
 
 ----
 **Pinned on the bottom**

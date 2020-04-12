@@ -55,7 +55,7 @@ Kath Bloom 《Come here》
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nQpYHiB0k6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Self-Made Vlog
-* [Before Sunset 巴黎圣地巡礼 vlog](/2020/03/09/爱在vlog/) - 自我打分：8/10
+* [Before Sunset 巴黎圣地巡礼 vlog](/2020/03/09/videos/vlog-爱在vlog/) - 自我打分：8/10
 
 一件自己好多年来想做的一件事，终于完成了这个小心愿。很幸福。欧洲行的highlights之一。
 

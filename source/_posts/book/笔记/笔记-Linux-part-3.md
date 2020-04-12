@@ -5,9 +5,9 @@ tags:
  - books
 ---
 
-鸟叔的Linux私房菜
+鸟叔的Linux私房菜 之 第三部分 学习 Shell 与 Shell scripts
 
-第三部分 学习 Shell 与 Shell scripts
+这部分我学的还蛮认真的，因为平时用到的相对较多，在我看来，bash 和 bash script的掌握情况，也(间接+片面)的反应了一个sde的专业水准。
 
 TBD: 整理成更加分类的模式 或 直接成cheat sheet
 
