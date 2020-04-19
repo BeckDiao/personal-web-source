@@ -46,7 +46,7 @@ date: 2019-11-12 22:02:29
 [大雄的书 list - top 10](/2020/03/15/inventory/favorite/inventory-book-top25/)
 [大雄的电影 list - 2020 top 10](/2020/03/15/inventory/favorite/inventory-movie-top10-2020/)
 [大雄的那些将来还会重听的播客节目](/2020/03/28/inventory/favorite/inventory-podcasts-to-be-listened-again/)
-
+[大雄的特殊歌单 placeholder](/)
 
 ## 2020
 
