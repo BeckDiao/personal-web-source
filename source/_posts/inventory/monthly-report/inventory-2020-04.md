@@ -101,5 +101,5 @@ WFH的第二个月，时间过得飞快，尤其是每天只是简单重复的�
 以后不这样了，等有好主意再拍吧。
 
 ## Photo of the Month
-
-TODO
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/animal_crossing.jpg" width = "557" height = "360"/>
+当然是动森啦~

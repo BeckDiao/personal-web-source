@@ -99,5 +99,5 @@ A:你们还天天在那儿看那么傻X综艺呢。
 希望我将来还能有更多的有趣的想法。
 
 ## Photo of the Month
-TODO:
-download a picture from NS for animal crossing
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/photos/monthly+photo/2020-03.JPG" width = "742" height = "576"/>
+小布、sand point park, 我的发型，这张照片简直是我4月左右的缩影。
