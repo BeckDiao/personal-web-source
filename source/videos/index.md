@@ -11,6 +11,9 @@ Final Cut Pro X 是大雄剪辑视频用的软件，所以顾名思义，这个�
 
 ## Vlogs
 
+**[西雅图夏日的晴空，与彗星和晚霞相遇](/2020/08/23/videos/vlog-neowise-olympic/)**
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/olympic_np.png" width = "512" height = "288"/>
+
 * [EU 下 - 国家德比+伯纳乌朝圣之旅 | 在伯纳乌看国家德比是种什么样的体验 | 皇马 | 皇家马德里 | 2020 国家德比](/2020/07/13/videos/vlog-real-madrid/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/real_madrid.jpg" width = "755" height = "503"/>
 
