@@ -11,7 +11,13 @@ Final Cut Pro X 是大雄剪辑视频用的软件，所以顾名思义，这个�
 
 ## Vlogs
 
-**[西雅图夏日的晴空，与彗星和晚霞相遇](/2020/08/23/videos/vlog-neowise-olympic/)**
+* [一个艰难的决定 | 亚马逊 | 换组](/2020/11/07/videos/vlog-换组/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/difficult-decision.jpg" width = "800" height = "450"/>
+
+* [拜登的动森小岛参观 | 2020美国大选(秀)](/2020/11/04/videos/vlog-动森拜登/)*
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/joe-island.png" width = "454" height = "260"/>
+
+* [西雅图夏日的晴空，与彗星和晚霞相遇](/2020/08/23/videos/vlog-neowise-olympic/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/olympic_np.png" width = "512" height = "288"/>
 
 * [EU 下 - 国家德比+伯纳乌朝圣之旅 | 在伯纳乌看国家德比是种什么样的体验 | 皇马 | 皇家马德里 | 2020 国家德比](/2020/07/13/videos/vlog-real-madrid/)
@@ -39,6 +45,9 @@ Final Cut Pro X 是大雄剪辑视频用的软件，所以顾名思义，这个�
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/san_juan_island_cover.jpg" width = "415" height = "240"/>
 
 ## Beyond The Life
+
+* [自制mv】秦皇岛 cover 万青](/2020/10/11/videos/vlog-秦皇岛mv/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/qinhuangdao-mv.jpg" width = "512" height = "288"/>
 
 * [EU 下 - 国家德比+伯纳乌朝圣之旅 | 在伯纳乌看国家德比是种什么样的体验 | 皇马 | 皇家马德里 | 2020 国家德比](/2020/07/13/videos/vlog-real-madrid/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/real_madrid.jpg" width = "755" height = "503"/>

@@ -44,11 +44,24 @@ date: 2019-11-12 22:02:29
 [大雄的30岁 plan](/2019/11/11/inventory/plan/inventory-30plan/)
 [大雄的电影 list - top 25](/2020/03/15/inventory/favorite/inventory-movie-top25-list/)
 [大雄的书 list - top 10](/2020/03/15/inventory/favorite/inventory-book-top25/)
-[大雄的电影 list - 2020 top 10](/2020/03/15/inventory/favorite/inventory-movie-top10-2020/)
 [大雄的那些将来还会重听的播客节目](/2020/03/28/inventory/favorite/inventory-podcasts-to-be-listened-again/)
 [大雄的特殊歌单 placeholder](/)
 
 ## 2020
+
+* [2020-10 一个无比艰难的决定](/2020/11/11/inventory/monthly-report/inventory-2020-11/)
+
+2020年10-11月， 毫无疑问一定是 动荡的2020年中最决定性的一个月。
+这一个月中经历的沮丧、煎熬和失落让我重新开始审视自己的内心。
+这一个月过后很多事情，包括生活中最重要的事情之一 —— 工作，的变化，也让这一个月变成了2020中12个月中加粗的那个。
+另外，在写这篇月记的时候，我已经28岁了。
+
+* [2020-09 各种“骗自己”的尝试后的没有结果](/2020/10/11/inventory/monthly-report/inventory-2020-09/)
+
+这个月总体来说是过得很随意的，没什么外在的压力，做的事情依旧没有兴趣
+想要寻求改变，但是大的不敢，小的没意义
+总之又是水过的一个月
+可能最大的收获是拍了《秦皇岛》的mv
 
 * [2020-08 吉他让我快乐](/2020/09/11/inventory/monthly-report/inventory-2020-08/)
 
