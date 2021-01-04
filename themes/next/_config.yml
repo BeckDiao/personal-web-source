@@ -131,7 +131,8 @@ menu:
   home: / || home
   inventory: /inventory/ || folder
   books: /books/ || book
-  videos: /videos/ || youtube
+  videos: https://space.bilibili.com/3978963 || youtube
+  podcast: https://anchor.fm/xin-diao || podcast
   summaries: /summary/ || file-word-o
   about: /about/ || user
   #tags: /tags/ || tags
