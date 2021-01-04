@@ -39,17 +39,28 @@ date: 2019-11-12 22:02:29
 
 
 ## Pinned Links at top
-
-[大雄的 2020 OP1](/2020/01/01/inventory/plan/inventory-2020plan/)
+[大雄的 2021 OP1](/2020/12/30/inventory/plan/inventory-2021plan/)
 [大雄的30岁 plan](/2019/11/11/inventory/plan/inventory-30plan/)
 [大雄的电影 list - top 25](/2020/03/15/inventory/favorite/inventory-movie-top25-list/)
 [大雄的书 list - top 10](/2020/03/15/inventory/favorite/inventory-book-top25/)
 [大雄的那些将来还会重听的播客节目](/2020/03/28/inventory/favorite/inventory-podcasts-to-be-listened-again/)
 [大雄的特殊歌单 placeholder](/)
 
+## Archived
+[大雄的 2020 OP1 & retrospect](/2020/01/01/inventory/plan/inventory-2020plan/)
+
 ## 2020
 
-* [2020-10 一个无比艰难的决定](/2020/11/11/inventory/monthly-report/inventory-2020-11/)
+* [2020-11 ~ 12 扯淡的2020终于走到了最后](/2020/12/20/inventory/monthly-report/inventory-2020-12/)
+
+坏消息不断的2020终于来到了最后一个月
+今天是2020.12.30 距离2021还有两天
+holiday season真的是不管再忙 + 不管再无事可做、无处可玩
+依旧是不想工作
+2020的retrospect还是放在 [我的2020 OP1](https://beckdiao.github.io/2020/01/01/inventory/plan/inventory-2020plan/)
+这篇还是聚焦在11、12月吧
+
+* [2020-10 一个无比艰难的决定](/2020/11/11/inventory/monthly-report/inventory-2020-10/)
 
 2020年10-11月， 毫无疑问一定是 动荡的2020年中最决定性的一个月。
 这一个月中经历的沮丧、煎熬和失落让我重新开始审视自己的内心。

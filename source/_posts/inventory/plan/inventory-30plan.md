@@ -3,6 +3,9 @@ title: 大雄的30岁plan
 date: 2019-11-11 14:21:33
 tags: 
  - inventory
+password: 30plan
+message: 请输入密码
+wrong_pass_message: 密码错了，要是不知道就别试了，退出吧
 ---
 
 大雄给自己定下的30岁生日前要完成的目标。
@@ -40,6 +43,8 @@ tags:
 滑雪：
 * 单板：自由滑大山没问题。平花没问题。
 * 双板：自由滑大山没问题。
+
+吉他：TBD
 
 ## 身体
 

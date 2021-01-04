@@ -11,6 +11,9 @@ Final Cut Pro X 是大雄剪辑视频用的软件，所以顾名思义，这个�
 
 ## Vlogs
 
+* [当我谈论2020时我想谈论什么](/2020/12/20/videos/vlog-2020/)
+<img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/2020.jpg" width = "403" height = "302"/>
+
 * [一个艰难的决定 | 亚马逊 | 换组](/2020/11/07/videos/vlog-换组/)
 <img src="https://personal-bucket-prod.s3-us-west-2.amazonaws.com/videos/difficult-decision.jpg" width = "800" height = "450"/>
 
